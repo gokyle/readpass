@@ -14,6 +14,16 @@ func unixReadPassword(prompt string) (password string, err error) {
 	return
 }
 
+func unixReadPasswordBytes(prompt string) (password []byte, err error) {
+	password, err = readpass.ReadPass(prompt)
+	fmt.Printf("\n")
+	if err != nil {
+		password = nil
+	}
+	return
+}
+
 func init() {
 	PasswordPrompt = unixReadPassword
+	PasswordPromptBytes = unixReadPasswordBytes
 }

@@ -2,9 +2,9 @@
 ### a Go package for reading passwords safely.
 
 `readpass` provides an interface for reading passwords from the
-console securely. It uses cgo to interface with the `termios`
-functions on Unix-based systems. It has been tested working on
-OpenBSD, Ubuntu and Arch Linux, and OS X 10.8 and 10.9.
+console securely. Thanks to code from
+[Matt Silverlock](https://github.com/elithrar), it no longer requires
+cgo.
 
 An example program is included under in the `example/example.go`
 program; it reads a line of text and prints the length.
@@ -12,8 +12,8 @@ program; it reads a line of text and prints the length.
 
 ### CAVEATS
 
-* Windows is not supported; I don't have the background or skills
-(or software) to implement this.
+* Windows may or may not supported; I don't have the resources to
+  test this.
 
 ### LICENSE
 

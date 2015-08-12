@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"code.google.com/p/go.crypto/ssh/terminal"
+	"golang.org/x/crypto/ssh/terminal"
 )
 
 func SSHPasswordPrompt(prompt string) (password string, err error) {
